@@ -6,13 +6,18 @@ public class Factorial {
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("Enter a number: ");
-        int n = scanner.nextInt();
+        int num = scanner.nextInt();
         int fac = 1;
 
-        for (; n>0; n--){
-            fac *= n;
+        if (num < 0){
+            System.out.println("Invalid Number!");
+        }
+        else {
+            for (int i = num; i >= 1; i--) {
+                fac *= i;
+            }
         }
 
-        System.out.println("Factorial of " + n + "! is : " + fac);
+        System.out.println("Factorial of " + num + "! is : " + fac);
     }
 }
