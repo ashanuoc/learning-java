@@ -8,8 +8,10 @@ public class SumOfFirstNNumbers {
         System.out.print("Enter a Number: ");
         int n = scanner.nextInt();
         int sum = 0;
-        
-        for (int i=0; i<=n; i++){
+        if (n <1){
+            System.out.println("invalid number!");
+        }
+        for (int i=1; i<=n; i++){
 //            sum = sum + i;
             sum += i;
         }
