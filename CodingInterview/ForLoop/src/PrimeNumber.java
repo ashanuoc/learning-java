@@ -34,7 +34,7 @@ public class PrimeNumber {
             System.out.println(n+ " is a prime number");
         }
 
-
+        scanner.close();
 
     }
 }

@@ -7,11 +7,15 @@ public class FibonacciNumbers {
         System.out.print("Enter a Number: ");
         int num = scanner.nextInt();
 
-
+        if (num <= 0){
+            System.out.print("Please Enter a valid number: ");
+            num = scanner.nextInt();
+        }
         if (num==1){
             System.out.println(num-1);
         }
         else if (num==2){
+            System.out.println(num-2);
             System.out.println(num-1);
         }
         else{
