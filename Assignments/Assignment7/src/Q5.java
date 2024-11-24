@@ -11,28 +11,37 @@ public class Q5 {
         System.out.print("Enter number 3: ");
         int num3 = scanner.nextInt();
 
-        int secondMax = 0;
+        int secondMax;
 
-        if (num1 > num2 && num1 > num3) {
-            if (num2 > num3) {
-                secondMax = num2;
-            } else {
-                secondMax = num3;
-            }
-        } else if (num2 > num1 && num2 > num3) {
-            if (num1 > num3) {
-                secondMax = num1;
-            } else {
-                secondMax = num3;
-            }
-        } else if (num3 > num1 && num3 > num2) {
-            if (num1 > num2) {
-                secondMax = num1;
-            } else {
-                secondMax = num2;
-            }
+        if ((num1 > num2) && (num1 < num3) || (num1 < num2) && (num1 > num3)){
+            secondMax = num1;
+        } else if ((num2 > num1) && (num2 < num3) || (num2 < num1) && (num2 > num3)) {
+            secondMax = num2;
         }
+        else secondMax = num3;
+
         System.out.println("Second max number is " + secondMax);
+
+//        if (num1 > num2 && num1 > num3) {
+//            if (num2 > num3) {
+//                secondMax = num2;
+//            } else {
+//                secondMax = num3;
+//            }
+//        } else if (num2 > num1 && num2 > num3) {
+//            if (num1 > num3) {
+//                secondMax = num1;
+//            } else {
+//                secondMax = num3;
+//            }
+//        } else if (num3 > num1 && num3 > num2) {
+//            if (num1 > num2) {
+//                secondMax = num1;
+//            } else {
+//                secondMax = num2;
+//            }
+//        }
+//        System.out.println("Second max number is " + secondMax);
         }
     }
 
