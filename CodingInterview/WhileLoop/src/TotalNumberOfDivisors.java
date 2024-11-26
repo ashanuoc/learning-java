@@ -9,14 +9,17 @@ public class TotalNumberOfDivisors {
 
         int i = 1;
         int count = 0;
+        int sqrt = (int) Math.sqrt(num);
 
-        while (i <= Math.sqrt(num)){
-            if ((num % i == 0) && (num / i != i)){
-                count += 2;
-            } else if ((num % i == 0) && (num / i == i)) {
-                count ++;
+        while (i <= sqrt){
+            if (num % i == 0){
+                if ((num / i != i)){
+                    count += 2;
+                }
+                else {
+                    count ++;
+                }
             }
-
             i++;
         }
         System.out.println("total number of divisors of number " + num + " is: " + count);
