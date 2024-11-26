@@ -10,16 +10,32 @@ public class TotalNumberOfDivisors {
         int i = 1;
         int count = 0;
 
-        while (i<=num/2){
-            if (num % i == 0){
-                count++;
+        while (i <= Math.sqrt(num)){
+            if ((num % i == 0) && (num / i != i)){
+                count += 2;
+            } else if ((num % i == 0) && (num / i == i)) {
+                count ++;
             }
 
             i++;
         }
-
-        count +=1; // include the number itself
         System.out.println("total number of divisors of number " + num + " is: " + count);
+
+
+
+//        int i = 1;
+//        int count = 0;
+//
+//        while (i<=num/2){
+//            if (num % i == 0){
+//                count++;
+//            }
+//
+//            i++;
+//        }
+//
+//        count +=1; // include the number itself
+//        System.out.println("total number of divisors of number " + num + " is: " + count);
 
 
         scanner.close();
