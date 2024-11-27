@@ -19,6 +19,10 @@ public class CoffeOrderingDoWhile {
 
             System.out.print("Provide the number for the selected coffee: ");
             coffee = scanner.nextInt();
+
+            if (coffee < 1 || coffee > 3){
+                System.out.println("Invalid choice");
+            }
         }
         while (coffee < 1 || coffee > 3);
 
@@ -32,37 +36,52 @@ public class CoffeOrderingDoWhile {
             price += 300;
         }
 
-        System.out.print("Do you need Add-Ons (yes=1 / no=0): ");
-        int addOn = scanner.nextInt();
+        int addOn;
 
-        if (addOn < 0 || addOn > 2){
-            System.out.println("Invalid choice");
-        }
-        else if (addOn == 1){
-            System.out.println("Add whipped cream for ₹30? (yes=1 / no=0):");
-            int addCream = scanner.nextInt();
-
-            if (addCream < 0 || addCream > 2){
+        do {
+            System.out.print("Do you need Add-Ons (yes=1 / no=0): ");
+            addOn = scanner.nextInt();
+            if (addOn < 0 || addOn > 2){
                 System.out.println("Invalid choice");
             }
-            else if (addCream == 1){
+        }while (addOn < 0 || addOn > 2);
+
+        if (addOn == 1){
+            int addCream;
+            do {
+                System.out.println("Add whipped cream for ₹30? (yes=1 / no=0):");
+                addCream = scanner.nextInt();
+                if (addCream < 0 || addCream > 2){
+                    System.out.println("Invalid choice");
+                }
+            }while (addCream < 0 || addCream > 2);
+
+            if (addCream == 1){
                 price += 30;
             }
 
-            System.out.println("Add a flavor shot? (Vanilla for ₹20 or Hazelnut for ₹25) (yes=1 / no=0):");
-            int addFlavor = scanner.nextInt();
+            int addFlavor;
+            do {
+                System.out.println("Add a flavor shot? (Vanilla for ₹20 or Hazelnut for ₹25) (yes=1 / no=0):");
+                addFlavor = scanner.nextInt();
 
-            if (addFlavor < 0 || addFlavor > 2){
-                System.out.println("Invalid choice");
-            }
-            else if (addFlavor == 1){
-                System.out.println("Which one? (Enter 1 for Vanilla & 2 for Hazelnut):");
-                int flavor = scanner.nextInt();
-
-                if (flavor < 0 || flavor > 2){
+                if (addFlavor < 0 || addFlavor > 2){
                     System.out.println("Invalid choice");
                 }
-                else if (flavor == 1){
+            }while (addFlavor < 0 || addFlavor > 2);
+
+            if (addFlavor == 1){
+                int flavor;
+                do {
+                    System.out.println("Which one? (Enter 1 for Vanilla & 2 for Hazelnut):");
+                    flavor = scanner.nextInt();
+
+                    if (flavor < 0 || flavor > 2){
+                        System.out.println("Invalid choice");
+                    }
+                }while (flavor < 0 || flavor > 2);
+
+                if (flavor == 1){
                     price += 20;
                 }
                 else{
