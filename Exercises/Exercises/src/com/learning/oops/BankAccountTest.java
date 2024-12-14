@@ -9,7 +9,7 @@ public class BankAccountTest {
         bankAccount1.setPhoneNumber(1234567890);
 
         bankAccount1.deposit(500);
-        bankAccount1.withdraw(300);
+        bankAccount1.withdraw(300.56);
 
         bankAccount1.displayDetails();
 

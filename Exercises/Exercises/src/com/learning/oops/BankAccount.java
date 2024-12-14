@@ -25,13 +25,13 @@ public class BankAccount {
     private double balance;
     private long phoneNumber;
 
-    public void deposit(int credit){
+    public void deposit(double credit){
         if (credit > 0) {
             this.balance += credit;
         }
     }
 
-    public void withdraw(int debit){
+    public void withdraw(double debit){
         if (debit > 0 && this.balance > debit){
             this.balance -= debit;
         }
