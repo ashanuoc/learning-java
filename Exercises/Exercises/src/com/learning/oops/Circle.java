@@ -1,3 +1,13 @@
+/*
+(i) Create a class Circle with the following field:
+    radius (double)
+(ii) Add the following methods:
+    setRadius(double radius) to set the radius
+    getArea() to calculate and return the area
+    getCircumference() to calculate and return the circumference
+
+(iii) Ensure the radius is a positive number. If a negative value is entered, default it to 1.
+*/
 package com.learning.oops;
 
 public class Circle {
