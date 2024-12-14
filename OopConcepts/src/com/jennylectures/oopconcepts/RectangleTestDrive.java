@@ -9,10 +9,11 @@ public class RectangleTestDrive {
 
         obj1.displayDetails();
 
-        obj2.setLength(13);
-        obj2.setBreadth(15);
+        obj2.setLength(13).setBreadth(15).displayDetails();
+        System.out.println(obj2.setLength(13));
+//        obj2.setBreadth(15);
 
-        obj2.displayDetails();
+//        obj2.displayDetails();
 
 //        System.out.println("length: " + obj1.getLength());
 //        System.out.println("breadth: " + obj1.getBreadth());

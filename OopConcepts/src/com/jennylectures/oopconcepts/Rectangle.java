@@ -9,18 +9,34 @@ public class Rectangle {
         return breadth;
     }
 
-    public void setBreadth(int b) {
-        breadth = b;
+//    public void setBreadth(int b) {
+//        breadth = b;
+//    }
+    public Rectangle setBreadth(int b) {
+        this.breadth = b;
+        return this;
     }
+
 
     public int getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+//    public void setLength(int length) {
+//        // length = length // ambiguity. instance and local variable equal
+//        this.length = length; // current instance
+//    }
+    public Rectangle setLength(int length) {
         // length = length // ambiguity. instance and local variable equal
         this.length = length; // current instance
+        return this;
     }
+
+    public void increaseLength(int byHowMuch) {
+        setLength(this.length + byHowMuch);
+    }
+
+
 
     public int areaOfRectangle(){
 //        area = this.length * this.breadth; // java is assigning this automatically here
@@ -36,6 +52,6 @@ public class Rectangle {
     }
 
     public void show(Rectangle obj){
-        System.out.println("Method calling using Object reference: " + obj);
+        System.out.println("Method calling using Object reference: ");
     }
 }
