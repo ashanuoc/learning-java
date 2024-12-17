@@ -10,8 +10,8 @@ public class ConstructorIntroMain {
         ConstructorIntro obj2 = new ConstructorIntro("payal", "1234586", 5010.5);
         obj2.displayDetails();
 
-        ConstructorIntro obj3 = new ConstructorIntro();
-        obj3.displayDetails();
+//        ConstructorIntro obj3 = new ConstructorIntro();
+//        obj3.displayDetails();
 //        obj1.setAccountName("Jenny");
 //        obj1.displayDetails();
 //        System.out.println("Account Name: " + obj1.getAccountName());

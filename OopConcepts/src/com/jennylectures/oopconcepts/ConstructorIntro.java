@@ -7,25 +7,57 @@ public class ConstructorIntro {
     private long phoneNumber;
 
 // Constructor overloading
-    public ConstructorIntro(String accountName, String accountNumber, double balance, long phoneNumber){
-        this.accountName = accountName;
-        this.accountNumber = accountNumber;
-        this.balance = balance;
-        this.phoneNumber = phoneNumber;
-    }
+// Constructor chaining
+public ConstructorIntro(String accountName, String accountNumber, double balance, long phoneNumber){
+    this.accountName = accountName;
+    this.accountNumber = accountNumber;
+    this.balance = balance;
+    this.phoneNumber = phoneNumber;
+    System.out.println("Parameterized constructor is beign called with 4 arguments");
+}
 
     public ConstructorIntro(String accountName, String accountNumber, double balance){
-        this.accountName = accountName;
-        this.accountNumber = accountNumber;
-        this.balance = balance;
+        this(accountName,accountNumber,balance,12345678910L); // "this" should be the first line in constructor
+
     }
 
     public ConstructorIntro(){
-        this.accountName = "Unknown";
-        this.accountNumber = "Unknown";
-        this.balance = 0.0;
-        this.phoneNumber = 12345678910L;
+        this("Unknown","Unknown",0.0,12345678910L);
+        System.out.println("No argument constructor is being called");
+
     }
+//        public ConstructorIntro(String accountName, String accountNumber, double balance){
+//        this.accountName = accountName;
+//        this.accountNumber = accountNumber;
+//        this.balance = balance;
+//        System.out.println("3");
+//    }
+//
+//        public ConstructorIntro(String accountName, String accountNumber, double balance, long phoneNumber){
+//            this(accountName,accountNumber,balance);
+//            this.phoneNumber = phoneNumber;
+//            System.out.println("4");
+//    }
+
+//    public ConstructorIntro(String accountName, String accountNumber, double balance, long phoneNumber){
+//        this.accountName = accountName;
+//        this.accountNumber = accountNumber;
+//        this.balance = balance;
+//        this.phoneNumber = phoneNumber;
+//    }
+//
+//    public ConstructorIntro(String accountName, String accountNumber, double balance){
+//        this.accountName = accountName;
+//        this.accountNumber = accountNumber;
+//        this.balance = balance;
+//    }
+//
+//    public ConstructorIntro(){
+//        this.accountName = "Unknown";
+//        this.accountNumber = "Unknown";
+//        this.balance = 0.0;
+//        this.phoneNumber = 12345678910L;
+//    }
 
     public long getPhoneNumber() {
         return phoneNumber;
@@ -63,5 +95,6 @@ public class ConstructorIntro {
         System.out.println("Account Name: " + this.accountName);
         System.out.println("Account Number: " + this.accountNumber);
         System.out.println("Account Balance: " + this.balance);
+        System.out.println("Account phoneNumber: " + this.phoneNumber);
     }
 }
