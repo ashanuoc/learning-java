@@ -2,9 +2,9 @@ package com.jennylectures.inheritanceconcepts;
 
 public class Main {
     public static void main(String[] args) {
-        EngineeringStudent engStu1 = new EngineeringStudent();
-        engStu1.setName("Jenny");
-        System.out.println("Name: " + engStu1.getName());
+//        EngineeringStudent engStu1 = new EngineeringStudent();
+//        engStu1.setName("Jenny");
+//        System.out.println("Name: " + engStu1.getName());
 
 //        Student s1 = new Student();
 //        s1.setName("Ankit");
