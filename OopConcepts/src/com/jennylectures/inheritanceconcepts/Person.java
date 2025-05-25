@@ -1,9 +1,23 @@
 package com.jennylectures.inheritanceconcepts;
 
 public class Person {
-    private String name;
+    protected String name;
     private String address;
     private long phoneNo;
+
+//    public Person(){
+//        System.out.println("Person Constructor called");
+//    }
+    public Person(String name){
+        System.out.println("Person Constructor called");
+    }
+    public Person(String name, String address){
+        System.out.println("Person Constructor called");
+    }
+
+    public void display(){
+        System.out.println(name + "is a person");
+    }
 
     public String getName() {
         return name;
@@ -29,7 +43,7 @@ public class Person {
         this.name = name;
     }
 
-    public void greet(){
-        System.out.println("Hi ");
-    }
+//    public void greet(){
+//        System.out.println("Hi ");
+//    }
 }
